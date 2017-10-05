@@ -1,0 +1,35 @@
+{
+  "name": "datapackage-normalize-js",
+  "version": "0.0.1",
+  "description": "Normalization for descriptor ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ava -v",
+    "watch:test": "npm t -- --watch"
+  },
+  "ava": {
+    "failFast": false,
+    "files": [
+      "test/*test.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datahq/datapackage-normalize-js.git"
+  },
+  "author": "Datopian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/datahq/datapackage-normalize-js/issues"
+  },
+  "homepage": "https://github.com/datahq/datapackage-normalize-js#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "example",
+  "author": "Mikane",
+  "license": {
+    "name": "example_license",
+    "url": "https://example/license.com"
+  },
+  "resources": [
+    {
+      "url": "https://raw.github.com/datasets/dp/ppp-gdp.csv",
+      "path": "dp/ppp-gdp.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Country",
+            "type": "string"
+          },
+          {
+            "name": "Country ID",
+            "type": "decimal",
+            "description": "ISO 3166-1 alpha-2 code"
+          },
+          {
+            "name": "Year",
+            "type": "date",
+            "format": "YYYY",
+            "description": "Relevant year"
+          }
+        ]}
+    }
+  ],
+  "sources": [
+    {
+      "name": "source-name",
+      "web": "https://example/source.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "contributor-name"
+    },
+    {
+      "email": "test@gmail.com"
+    }
+  ]
+}
