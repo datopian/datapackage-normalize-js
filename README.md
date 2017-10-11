@@ -6,20 +6,15 @@ datapackage-normalize-js is a lightweight library providing a normalization for 
 
 ## Installation
 
-`npm install datapackage-normalize-js`
+- clone the repo
+ 
+`npm install -g`
 
 ## Usage
 
-Normalize entire datapackage.json:
+Normalize datapackage.json:
 ```javascript
-const dp = normalize(path)
-// path is local path to datapackage.json
-const dp = normalizeAll(dp)
-// dp is datapackage.json
-```
-Normalize only particular properties:
-```javascript
-const dp = normalizeContributors(dp)
-const dp = normalizeSources(dp)
-// dp is datapackage.json
+normalize.js [path]
+// path (optional) is the path to datapackage.json
+//prints out updated dp 
 ```
