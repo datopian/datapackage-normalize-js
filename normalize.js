@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const fs = require('fs')
 const {join, parse} = require('path')
 
@@ -178,7 +179,7 @@ const normalize = path => {
   }
 }
 
-if (process.argv[1] === '/usr/local/bin/normalize.js'){
+if (process.argv[1] === '/usr/local/bin/normalize.js') {
   const pathForDataset = process.argv[2]
   normalize(pathForDataset)
 }
