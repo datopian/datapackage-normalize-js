@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const {join, parse} = require('path')
-const lodash = require('lodash')
+
 
 const normalizeSchema = dp => {
   for (const propertyName in dp) {
@@ -56,18 +58,22 @@ const normalizeResourcesNames = dp => {
 }
 
 const normalizeLicenses = dp => {
+  
   normalizeSchema(dp)
   if (dp.license) {
-    if (lodash.isString(dp.license)) {
+    if (typeof dp.licensne === 'string') {
       dp.licenses = new Array()
       dp.licenses.push({name: dp.license})
       delete dp.license.licenses
-    } else if (lodash.isArray(dp.license)) {
+    } else if (isArray(dp.license)) {
       dp.licenses = dp.license
       delete dp.license
     }
-  }
+  }  
   return dp
+}
+const isArray = (a) => {
+  return (!!a) && (a.constructor === Array);
 }
 
 const normalizeSources = dp => {
@@ -152,6 +158,7 @@ const normalize = path => {
         console.error(err.message)
         return
       }
+      console.log(JSON.stringify(dp, null, 2))
       console.log('Datapackage.json has been normalized')
     })
   }
@@ -170,6 +177,11 @@ const normalize = path => {
     normalizeAll(dp)
     writeDatapackage(dp)
   }
+}
+
+if (process.argv[1] === '/usr/local/bin/normalize.js') {
+  const pathForDataset = process.argv[2]
+  normalize(pathForDataset)
 }
 module.exports = {
   normalize,

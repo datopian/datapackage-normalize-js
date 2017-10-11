@@ -2,13 +2,16 @@
   "name": "datapackage-normalize-js",
   "version": "0.0.1",
   "description": "Normalization for descriptor ",
-  "main": "index.js",
+  "main": "normalize.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "ava -v",
     "watch:test": "npm t -- --watch"
+  },
+  "bin": {
+    "normalize.js": "./normalize.js"
   },
   "ava": {
     "failFast": false,
@@ -26,9 +29,7 @@
     "url": "https://github.com/datahq/datapackage-normalize-js/issues"
   },
   "homepage": "https://github.com/datahq/datapackage-normalize-js#readme",
-  "dependencies": {
-    "lodash": "^4.17.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "^0.22.0"
   }

@@ -1,5 +1,5 @@
 const test = require('ava')
-const norm = require('../index.js')
+const norm = require('../normalize.js')
 
 test('checks normalized all properties', t => {
   const pathToDataset = 'test/fixtures/invalid-dp.json'
