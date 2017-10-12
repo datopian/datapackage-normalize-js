@@ -1,5 +1,5 @@
 {
-  "name": "datapackage-normalize-js",
+  "name": "datapackage-normalize",
   "version": "0.0.1",
   "description": "Normalization for descriptor ",
   "main": "normalize.js",
